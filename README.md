@@ -32,4 +32,34 @@ Open `index.html` in your browser or run with VS Code Live Server.
 
 ---
 
+
 ## 📂 Project Structure
+
+---
+
+## 🚀 How to Run Locally
+
+1. Download or clone this repository.
+2. Open the project folder.
+3. Double-click `index.html`  
+   OR  
+   Open with VS Code and run using Live Server.
+
+---
+
+## 🎯 Project Purpose
+
+This project demonstrates:
+- Translating a Figma design into real code
+- Clean HTML structure and semantic layout
+- Responsive CSS layout techniques
+- UI styling and component organization
+- Personal branding and presentation
+
+---
+
+## 📌 Author
+
+**Ana Aziz Hemani**  
+Healthcare Analytics | Public Health Consultant | Data Analysis  
+GitHub: https://github.com/anaazizh
