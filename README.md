@@ -6,7 +6,7 @@ This project is a personal portfolio landing page built from a Figma template an
 
 ## 🌐 Live Preview
 Open `index.html` in your browser or run with VS Code Live Server.
-
+![landing-page-screenshot](https://github.com/user-attachments/assets/a671e241-ecea-4a03-9a39-ac20152a8042)
 ---
 
 ## ✨ Features
@@ -68,3 +68,4 @@ This project demonstrates:
 **Ana Aziz Hemani**  
 Healthcare Analytics | Public Health Consultant | Data Analysis  
 GitHub: https://github.com/anaazizh
+
