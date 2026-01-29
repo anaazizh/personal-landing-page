@@ -32,8 +32,13 @@ Open `index.html` in your browser or run with VS Code Live Server.
 
 ---
 
-
 ## 📂 Project Structure
+personal-landing-page/
+├── images/
+├── index.html
+├── styles.css
+├── main.js
+└── README.md
 
 ---
 
