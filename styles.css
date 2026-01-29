@@ -1,0 +1,215 @@
+:root{
+  --bg: #0b0c0d;
+  --panel: rgba(255,255,255,0.06);
+  --panel-border: rgba(255,255,255,0.10);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.65);
+  --muted-2: rgba(255,255,255,0.45);
+  --accent: #3b7f00;
+  --accent-hover: #2f6500;
+  --shadow: 0 18px 60px rgba(0,0,0,0.6);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background:
+    radial-gradient(900px 500px at 20% 30%, rgba(255,255,255,0.05), transparent 65%),
+    radial-gradient(900px 500px at 80% 20%, rgba(255,255,255,0.03), transparent 70%),
+    radial-gradient(1200px 700px at 50% 120%, rgba(0,0,0,0.85), transparent 55%),
+    var(--bg);
+}
+
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* NAVBAR pill */
+.navbar{
+  padding: 18px 0;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 16px 36px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0;                 /* separators handle spacing */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* Add the | divider */
+.nav-links li:not(:last-child)::after {
+  content: "|";
+  margin: 0 18px;
+  color: rgba(255,255,255,0.35);
+  font-weight: 400;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* HERO */
+.hero{
+  padding: 140px 0 70px;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero h2{
+  font-size: clamp(44px, 5vw, 74px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+}
+
+.hero p{
+  margin: 0 0 34px;
+  max-width: 60ch;
+  color: var(--muted);
+
+  /* template uses mono-looking body in hero */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 15.5px;
+}
+
+.btn-primary{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+
+  padding: 18px 34px;
+  width: 320px;          /* match PDF */
+  border-radius: 8px;    /* slightly less rounded */
+  font-weight: 800;
+  font-size: 18px;
+
+  box-shadow:
+    0 18px 50px rgba(59,127,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.07) inset;
+}
+
+.btn-primary:hover{
+  background: var(--accent-hover);
+}
+
+.hero-media{
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo{
+  width: min(460px, 82vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 12px solid rgba(255,255,255,0.06);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.75);
+}
+
+/* Sections */
+section{ padding: 90px 0; }
+h3{ margin: 0 0 20px; font-size: 28px; }
+
+/* Skills */
+.skills-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill{
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: rgba(255,255,255,0.72);
+  font-size: 14px;
+}
+
+/* Contact */
+.contact form{
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact input,
+.contact textarea{
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.contact textarea{ min-height: 130px; resize: vertical; }
+
+.contact button{
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.10);
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+footer{
+  padding: 34px 0 60px;
+  color: var(--muted-2);
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 980px){
+  .nav-inner{ gap: 16px; flex-wrap: wrap; }
+  .nav-links{ gap: 18px; flex-wrap: wrap; }
+  .hero-grid{ grid-template-columns: 1fr; }
+  .btn-primary{ min-width: 0; width: 100%; }
+  .worked-logos{ grid-template-columns: 1fr 1fr; }
+}
